@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#294758</color>
+    <color name="colorPrimaryDark">#294758</color>
+    <color name="colorAccent">#294758</color>
+    <color name="Mali">#50b597</color>
+    <color name="profile_color">#3e90a0</color>
+    <color name="receive_color">#ea5159</color>
+    <color name="transit_color">#50b698</color>
+    <color name="picking_color">#ecb214</color>
+    <color name="change_color">#f06191</color>
+    <color name="count_color">#5e66ae</color>
+    <color name="ok_color">#007f01</color>
+    <color name="bg_gray">#39444a</color>
+    <color name="black">#000000</color>
+    <color name="almost_white">#e9e9e9</color>
+    <color name="Defalutbtn">#ffffff</color>
+    <color name="btnDefault">#d5d6d6</color>
+    <color name="Profile_bg">#f1635f</color>
+    <color name="bg">#dbdbdb</color>
+</resources>
+<!--    <color name="colorPrimary">#5781a3</color>
+    <color name="colorPrimaryDark">#5781a3</color> -->

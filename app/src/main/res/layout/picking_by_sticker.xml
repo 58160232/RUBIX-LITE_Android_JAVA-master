@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Item :"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="53dp" />
+
+            <EditText
+                android:id="@+id/editText_ItemName"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Item"
+                android:inputType="text"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="112dp"
+                tools:layout_editor_absoluteY="41dp" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PO No."
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/editText_Po"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="PO No."
+                android:inputType="text"
+                android:nextFocusForward="@+id/editText_Lot" />
+
+            <TextView
+                android:id="@+id/txtLot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lot No."
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/editText_Lot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Lot No."
+                android:inputType="text"
+                android:nextFocusForward="@+id/editText_Total" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Quantity"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/editText_Total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Total Quantity"
+                android:inputType="number|numberDecimal"
+                android:nextFocusForward="@+id/spinner_Customer" />
+
+            <TextView
+                android:id="@+id/txtCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer"
+                android:textColor="@color/colorPrimary" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinner_Customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="@color/colorPrimary"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/editText_Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Location"
+                android:inputType="text"
+                android:nextFocusForward="@+id/btn_ok_picking_item"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_cancel_receive_item"
+                style="@android:style/Widget.Material.Light.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="@android:string/cancel"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="427dp" />
+
+            <Button
+                android:id="@+id/btn_ok_picking_item"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@android:string/ok"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="220dp"
+                tools:layout_editor_absoluteY="427dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

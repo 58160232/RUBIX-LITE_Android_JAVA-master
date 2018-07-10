@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="43dp">
+
+            <TextView
+                android:id="@+id/txt_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Barcode Item :  "
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_itemcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ItemCode"
+                android:textColor="?attr/colorPrimary" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_scan_itemcode"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="4dp"
+                    android:layout_row="0"
+                    android:background="@drawable/ic_barcode" />
+
+                <EditText
+                    android:id="@+id/editText_itemcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginRight="30dp"
+                    android:layout_row="0"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Itemcode"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@+id/btn_search_itemcode"
+                    android:paddingLeft="42dp" />
+
+                <Button
+                    android:id="@+id/btn_search_itemcode"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_row="0"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_arrow_forward_black_24dp" />
+            </GridLayout>
+
+            <LinearLayout
+                android:id="@+id/add_item_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/txt_itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="ItemName"
+                    android:textColor="?attr/colorPrimary" />
+
+                <GridLayout
+                    android:id="@+id/grid_itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:id="@+id/editText_itemname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginRight="30dp"
+                        android:layout_row="0"
+                        android:ems="10"
+                        android:hint="Itemname"
+                        android:inputType="textPersonName" />
+
+                    <Button
+                        android:id="@+id/btn-set"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_column="0"
+                        android:layout_gravity="right"
+                        android:layout_row="0"
+                        android:visibility="invisible" />
+                </GridLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox_serial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Need serial control" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_sticker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Need stick control" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_transit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Need transit" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <Button
+            android:id="@+id/btn_ok_add"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="Confirm"
+            android:textColor="?android:attr/colorAccent"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

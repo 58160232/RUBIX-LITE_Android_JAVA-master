@@ -1,0 +1,9 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <blacklists>
+      <blacklist language="Java">
+        <added pattern="android.graphics.Color.parseColor(colorString)" />
+      </blacklist>
+    </blacklists>
+  </component>
+</application>

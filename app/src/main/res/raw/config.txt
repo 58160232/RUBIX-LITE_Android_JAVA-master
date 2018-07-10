@@ -1,0 +1,4 @@
+<WebAuthenUrl>http://192.168.128.249/RUBIXLITEAuthentication/</WebAuthenUrl>
+<CompanyCode>RUBIX-LITE-SVR</CompanyCode>
+<Version>1.0</Version>
+<LastEdit>Li</LastEdit>

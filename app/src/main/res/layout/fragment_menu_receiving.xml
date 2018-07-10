@@ -1,0 +1,273 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context="rubix.mobile.rubix_mobile.Fragment.MenuReceivingFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:animateLayoutChanges="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiving Details"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_collapse"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_collapse"
+            android:backgroundTint="@color/place_autocomplete_prediction_secondary_text"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="8dp"
+        android:animateLayoutChanges="false">
+
+        <TextView
+            android:id="@+id/txtInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="Invoice"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editText_Invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@+id/editText_DoNo"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:ems="10"
+            android:hint="Invoice"
+            android:inputType="text"
+            android:paddingLeft="42dp" />
+
+
+        <TextView
+            android:id="@+id/txtDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="DO No."
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editText_DoNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@+id/editText_Ref"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:ems="10"
+            android:hint="DO No."
+            android:inputType="text"
+            android:paddingLeft="42dp" />
+
+        <TextView
+            android:id="@+id/txtRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="Reference"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editText_Ref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:ems="10"
+            android:hint="Reference"
+            android:inputType="text"
+            android:nextFocusDown="@+id/spinner_Supp"
+            android:nextFocusForward="@+id/spinner_Supp"
+            android:paddingLeft="42dp" />
+
+        <TextView
+            android:id="@+id/txtSupp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:text="Supplier"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinner_Supp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:nextFocusDown="@+id/btn_ok" />
+
+        <Button
+            android:id="@+id/btn_scan_invoice"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:layout_marginLeft="4dp"
+            android:layout_row="1"
+            android:background="@drawable/ic_barcode" />
+
+        <Button
+            android:id="@+id/btn_scan_do"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:layout_marginLeft="4dp"
+            android:layout_row="3"
+            android:background="@drawable/ic_barcode" />
+
+        <Button
+            android:id="@+id/btn_scan_ref"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:layout_marginLeft="4dp"
+            android:layout_row="5"
+            android:background="@drawable/ic_barcode" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:animateLayoutChanges="false"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_Scan_barcode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:layout_marginLeft="4dp"
+                android:layout_row="0"
+                android:layout_weight="1"
+                android:background="@drawable/ic_barcode" />
+
+            <EditText
+                android:id="@+id/editText_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginRight="30dp"
+                android:layout_row="0"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Item Barcode"
+                android:nextFocusForward="@+id/btn_search_barcode"
+                android:nextFocusRight="@+id/btn_search_barcode"
+                android:paddingLeft="42dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_seach_barcode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:layout_row="0"
+                android:layout_weight="1"
+                android:background="@drawable/ic_search_black_24dp"
+                android:elevation="0dp" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_row="8"
+        android:backgroundTint="?attr/colorPrimary"
+        android:gravity="center"
+        android:text="OK"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light" />
+
+    <View
+        android:id="@+id/view_devide"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_list_item_receive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        tools:listitem="@layout/recycleview_receive_item">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="confirm"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</LinearLayout>
